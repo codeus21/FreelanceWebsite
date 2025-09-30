@@ -1,6 +1,87 @@
 import "./PersonalWebsite.css"
+import { useEffect, useState } from "react"
 
 function PersonalWebsite() {
+    const [formData, setFormData] = useState({
+        name: '',
+        contact: '',
+        message: ''
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setSubmitStatus('success');
+                setFormData({ name: '', contact: '', message: '' });
+            } else {
+                setSubmitStatus('error');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+    useEffect(() => {
+        // Add smooth scrolling for navbar links
+        const handleNavClick = (e) => {
+            const href = e.target.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const navHeight = document.querySelector('.main-nav').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - navHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        };
+
+        // Add event listeners to all nav links
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', handleNavClick);
+        });
+
+        // Cleanup function
+        return () => {
+            navLinks.forEach(link => {
+                link.removeEventListener('click', handleNavClick);
+            });
+        };
+    }, []);
+
     return (
         <div className="website-container">
             {/* Navigation */}
@@ -48,7 +129,7 @@ function PersonalWebsite() {
                     </div>
                     <div className="portfolio-item">
                         <h3>🔹 COMING SOON</h3>
-                        <p>Trendy one-pager for a local coffee shop with menu, location, and reviews.</p>
+                        <p>Trendy one-pager with menu, location, and reviews.</p>
                     </div>
                 </div>
                 <button className="view-more">See full case studies →</button>
@@ -63,8 +144,8 @@ function PersonalWebsite() {
                     <div className="package-card starter">
                         <h3>🟩 Starter Site – $500+</h3>
                         <ul>
-                            <li>1-page custom design</li>
-                            <li>Includes Home, About, Services, Contact</li>
+                            <li>Home page custom design</li>
+                            <li>Includes Home, About, Services, Contact pages</li>
                             <li>Mobile-friendly</li>
                             <li>Basic SEO setup</li>
                             <li>Delivered in 5–7 days</li>
@@ -97,11 +178,11 @@ function PersonalWebsite() {
             <section id="about" className="about-section">
                 <h2>👤 About</h2>
                 <p>
-                    Hi, I'm David Aviles — a self-taught front-end web developer passionate about helping 
+                    Hi, I'm David Aviles — a web developer passionate about helping 
                     local businesses grow through clean, functional design.
                 </p>
                 <p>
-                    At Aviles Web Development, We focus on quality over quantity, giving every project the 
+                    At Aviles Web Solutions, We focus on quality over quantity, giving every project the 
                     attention it deserves. You're not hiring a giant agency — you're hiring someone who 
                     listens, cares, and delivers.
                 </p>
@@ -112,13 +193,65 @@ function PersonalWebsite() {
             <section id="contact" className="contact-section">
                 <h2>📬 Contact</h2>
                 <p>Interested in working together?</p>
+                
+                <div className="contact-form-container">
+                    <form className="contact-form" onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Your Name"
+                                value={formData.name}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                name="contact"
+                                placeholder="Email or Phone Number"
+                                value={formData.contact}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <textarea
+                                name="message"
+                                placeholder="Hello! I'm interested in working together."
+                                value={formData.message}
+                                onChange={handleInputChange}
+                                rows="5"
+                                required
+                            ></textarea>
+                        </div>
+                        <button 
+                            type="submit" 
+                            className="submit-btn"
+                            disabled={isSubmitting}
+                        >
+                            {isSubmitting ? 'Sending...' : 'Send Message'}
+                        </button>
+                        
+                        {submitStatus === 'success' && (
+                            <div className="status-message success">
+                                ✅ Message sent successfully! I'll get back to you soon.
+                            </div>
+                        )}
+                        
+                        {submitStatus === 'error' && (
+                            <div className="status-message error">
+                                ❌ Sorry, there was an error sending your message. Please try again or contact me directly.
+                            </div>
+                        )}
+                    </form>
+                </div>
+
                 <div className="contact-info">
                     <p>📞 Call or Text: (470) 526-3353</p>
                     <p>📧 Email: davidfrontweb@gmail.com</p>
                     <p>📍 Based in Atlanta – Serving clients nationwide</p>
-                </div>
-                <div className="contact-buttons">
-                    <button className="contact-btn">Contact Me</button>
                 </div>
             </section>
 
