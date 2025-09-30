@@ -16,7 +16,7 @@ function PersonalWebsite() {
 
             {/* Hero Section */}
             <section id="home" className="hero-section">
-                <h1 className="main-title">Aviles Development</h1>
+                <h1 className="main-title">Aviles Web Solutions</h1>
                 <h2>Custom Websites. Real Results.</h2>
                 <p className="hero-text">
                     We help local businesses, entrepreneurs, and personal brands get noticed with clean, 
@@ -24,7 +24,7 @@ function PersonalWebsite() {
                 </p>
                 <p className="hero-subtext">
                     Whether you're starting from scratch or need a fresh new look, we build your site 
-                    with purpose and personality — no templates, no shortcuts.
+                    with purpose and personality.
                 </p>
                 <div className="cta-buttons">
                     <button className="cta-primary">Get Started</button>
@@ -101,7 +101,7 @@ function PersonalWebsite() {
                     local businesses grow through clean, functional design.
                 </p>
                 <p>
-                    At Aviles Web Development, I focus on quality over quantity, giving every project the 
+                    At Aviles Web Development, We focus on quality over quantity, giving every project the 
                     attention it deserves. You're not hiring a giant agency — you're hiring someone who 
                     listens, cares, and delivers.
                 </p>
