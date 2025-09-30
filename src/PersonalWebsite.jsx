@@ -39,15 +39,15 @@ function PersonalWebsite() {
                 
                 <div className="portfolio-grid">
                     <div className="portfolio-item">
-                        <h3>🔹 GreenScape Landscaping</h3>
-                        <p>Clean single-page site with services, photo gallery, and contact form.</p>
+                        <h3>🔹 The Barber Book</h3>
+                        <p>Booking website for barber shops with online booking and appointment scheduling.</p>
                     </div>
                     <div className="portfolio-item">
-                        <h3>🔹 Coach Mia Fitness</h3>
+                        <h3>🔹 COMING SOON</h3>
                         <p>Branded website with booking integrations and bold visuals.</p>
                     </div>
                     <div className="portfolio-item">
-                        <h3>🔹 Flow Café</h3>
+                        <h3>🔹 COMING SOON</h3>
                         <p>Trendy one-pager for a local coffee shop with menu, location, and reviews.</p>
                     </div>
                 </div>
@@ -113,13 +113,12 @@ function PersonalWebsite() {
                 <h2>📬 Contact</h2>
                 <p>Interested in working together?</p>
                 <div className="contact-info">
-                    <p>📞 Call or Text: (Your Number)</p>
-                    <p>📧 Email: hello@avileswebdev.com</p>
-                    <p>📍 Based in [Your City] – Serving clients nationwide</p>
+                    <p>📞 Call or Text: (470) 526-3353</p>
+                    <p>📧 Email: davidfrontweb@gmail.com</p>
+                    <p>📍 Based in Atlanta – Serving clients nationwide</p>
                 </div>
                 <div className="contact-buttons">
                     <button className="contact-btn">Contact Me</button>
-                    <button className="book-call-btn">Book a Call</button>
                 </div>
             </section>
 
