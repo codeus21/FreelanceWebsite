@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Navbar.css";
 
 function Navbar() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
     useEffect(() => {
         // Add smooth scrolling for navbar links
         const handleNavClick = (e) => {
@@ -20,6 +22,9 @@ function Navbar() {
                         behavior: 'smooth'
                     });
                 }
+                
+                // Close mobile menu after clicking a link
+                setIsMobileMenuOpen(false);
             }
         };
 
@@ -37,15 +42,26 @@ function Navbar() {
         };
     }, []);
 
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
     return (
         <nav className="main-nav">
-            <div className="nav-links">
+            <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
                 <a href="#home">Home</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#services">Services</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
+            <button 
+                className="mobile-menu-toggle" 
+                onClick={toggleMobileMenu}
+                aria-label="Toggle mobile menu"
+            >
+                {isMobileMenuOpen ? '✕' : '☰'}
+            </button>
         </nav>
     );
 }

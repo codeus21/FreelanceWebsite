@@ -1019,10 +1019,26 @@ body {
 
     .main-title {
         font-size: 2.8rem;
+        padding: 0 1rem;
+        line-height: 1.2;
     }
     
     .hero-section h2 {
         font-size: 1.6rem;
+        padding: 0 1rem;
+        line-height: 1.3;
+    }
+    
+    .hero-text {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+        line-height: 1.6;
+    }
+    
+    .hero-subtext {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+        line-height: 1.6;
     }
     
     .hero-section {
@@ -1101,16 +1117,93 @@ body {
     .contact-section h2,
     .about-section h2 {
         font-size: 2.5rem;
+        padding: 0 1rem;
+        line-height: 1.2;
+    }
+    
+    .portfolio-section > p {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+        line-height: 1.6;
+    }
+    
+    .portfolio-item p {
+        font-size: 1rem;
+        padding: 0 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 2.4rem;
+        padding: 0 1.2rem;
+        line-height: 1.15;
+    }
+    
+    .hero-section h2 {
+        font-size: 1.5rem;
+        padding: 0 1.2rem;
+        line-height: 1.25;
+    }
+    
+    .hero-text {
+        font-size: 1.15rem;
+        padding: 0 1.2rem;
+        line-height: 1.55;
+    }
+    
+    .hero-subtext {
+        font-size: 1.05rem;
+        padding: 0 1.2rem;
+        line-height: 1.55;
+    }
+    
+    .portfolio-section h2,
+    .services-section h2,
+    .contact-section h2,
+    .about-section h2 {
+        font-size: 2.3rem;
+        padding: 0 1.2rem;
+        line-height: 1.15;
+    }
+    
+    .portfolio-section > p {
+        font-size: 1.15rem;
+        padding: 0 1.2rem;
+        line-height: 1.55;
+    }
+    
+    .portfolio-item p {
+        font-size: 1rem;
+        padding: 0 1.2rem;
+        line-height: 1.55;
     }
 }
 
 @media (max-width: 480px) {
     .main-title {
         font-size: 2.2rem;
+        padding: 0 1.5rem;
+        line-height: 1.1;
     }
     
     .hero-section h2 {
         font-size: 1.4rem;
+        padding: 0 1.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero-text {
+        font-size: 1.1rem;
+        padding: 0 1.5rem;
+        line-height: 1.5;
+    }
+    
+    .hero-subtext {
+        font-size: 1rem;
+        padding: 0 1.5rem;
+        line-height: 1.5;
     }
     
     .portfolio-section h2,
@@ -1118,6 +1211,20 @@ body {
     .contact-section h2,
     .about-section h2 {
         font-size: 2.2rem;
+        padding: 0 1.5rem;
+        line-height: 1.1;
+    }
+    
+    .portfolio-section > p {
+        font-size: 1.1rem;
+        padding: 0 1.5rem;
+        line-height: 1.5;
+    }
+    
+    .portfolio-item p {
+        font-size: 1rem;
+        padding: 0 1rem;
+        line-height: 1.5;
     }
     
     

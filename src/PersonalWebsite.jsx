@@ -67,8 +67,8 @@ function PersonalWebsite() {
                     with purpose and personality.
                 </p>
                 <div className="cta-buttons">
-                    <button className="cta-primary">Get Started</button>
-                    <button className="cta-secondary">View Packages</button>
+                    <button className="cta-primary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>Get Started</button>
+                    <button className="cta-secondary" onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}>View Packages</button>
                 </div>
             </section>
 
@@ -91,7 +91,6 @@ function PersonalWebsite() {
                         <p>Trendy one-pager with menu, location, and reviews.</p>
                     </div>
                 </div>
-                <button className="view-more">See full case studies →</button>
             </section>
 
             {/* Services Section */}
@@ -101,7 +100,7 @@ function PersonalWebsite() {
                 
                 <div className="packages-grid">
                     <div className="package-card starter">
-                        <h3>🟩 Starter Site – $500+</h3>
+                        <h3>🟩 Starter Site – $300-800</h3>
                         <ul>
                             <li>Home page custom design</li>
                             <li>Includes Home, About, Services, Contact pages</li>
@@ -111,23 +110,23 @@ function PersonalWebsite() {
                         </ul>
                     </div>
                     <div className="package-card business">
-                        <h3>🟨 Business Site – $1,200+</h3>
+                        <h3>🟨 Business Site – $1,000-1,500</h3>
                         <ul>
                             <li>Up to 5 custom pages</li>
                             <li>Modern, responsive design</li>
                             <li>On-page SEO</li>
-                            <li>Contact forms + map</li>
-                            <li>Hosting setup included</li>
+                            <li>Contact forms + map and other features</li>
+                            <li>Delivered in 10-15 days</li>
                         </ul>
                     </div>
                     <div className="package-card premium">
                         <h3>🟦 Premium Package – $2,000+</h3>
                         <ul>
-                            <li>Full site + logo + copy guidance</li>
+                            <li>Fully customized and optimized site</li>
                             <li>SEO-optimized structure</li>
                             <li>Personalized visuals</li>
-                            <li>2-week turnaround</li>
-                            <li>Includes 1 month of support</li>
+                            <li>Booking systems or other custom features</li>
+                            <li>Delivered in 2-4 weeks</li>
                         </ul>
                     </div>
                 </div>
