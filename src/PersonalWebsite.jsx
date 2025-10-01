@@ -1,5 +1,7 @@
 import "./PersonalWebsite.css"
-import { useEffect, useState } from "react"
+import { useState } from "react"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 
 function PersonalWebsite() {
     const [formData, setFormData] = useState({
@@ -47,53 +49,10 @@ function PersonalWebsite() {
             setIsSubmitting(false);
         }
     };
-    useEffect(() => {
-        // Add smooth scrolling for navbar links
-        const handleNavClick = (e) => {
-            const href = e.target.getAttribute('href');
-            if (href && href.startsWith('#')) {
-                e.preventDefault();
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
-                
-                if (targetElement) {
-                    const navHeight = document.querySelector('.main-nav').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - navHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        };
-
-        // Add event listeners to all nav links
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', handleNavClick);
-        });
-
-        // Cleanup function
-        return () => {
-            navLinks.forEach(link => {
-                link.removeEventListener('click', handleNavClick);
-            });
-        };
-    }, []);
 
     return (
         <div className="website-container">
-            {/* Navigation */}
-            <nav className="main-nav">
-                <div className="nav-links">
-                    <a href="#home">Home</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#services">Services</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </nav>
+            <Navbar />
 
             {/* Hero Section */}
             <section id="home" className="hero-section">
@@ -255,17 +214,7 @@ function PersonalWebsite() {
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="main-footer">
-                <p>Aviles Web Development | Custom websites built with care</p>
-                <p>© 2025 – All rights reserved</p>
-                <div className="social-links">
-                    <a href="#">Instagram</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Email</a>
-                    <a href="#">Portfolio</a>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }
