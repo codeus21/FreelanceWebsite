@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Letter A only -->
+  <path d="M60 20 L30 100 L42 100 L52 70 L68 70 L78 100 L90 100 L60 20 Z M55 60 L65 60 L60 45 L55 60 Z" 
+        fill="url(#textGradient)" 
+        stroke="url(#textGradient)" 
+        stroke-width="1" 
+        stroke-linejoin="round"/>
+</svg>

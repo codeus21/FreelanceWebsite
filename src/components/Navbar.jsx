@@ -48,20 +48,27 @@ function Navbar() {
 
     return (
         <nav className="main-nav">
-            <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
-                <a href="#home">Home</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+            <div className="nav-container">
+                <div className="nav-logo">
+                    <a href="#home" aria-label="Aviles Web Solutions Home">
+                        <img src="/logo.svg" alt="Aviles Web Solutions" width="40" height="40" />
+                    </a>
+                </div>
+                <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+                    <a href="#home">Home</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <button 
+                    className="mobile-menu-toggle" 
+                    onClick={toggleMobileMenu}
+                    aria-label="Toggle mobile menu"
+                >
+                    {isMobileMenuOpen ? '✕' : '☰'}
+                </button>
             </div>
-            <button 
-                className="mobile-menu-toggle" 
-                onClick={toggleMobileMenu}
-                aria-label="Toggle mobile menu"
-            >
-                {isMobileMenuOpen ? '✕' : '☰'}
-            </button>
         </nav>
     );
 }

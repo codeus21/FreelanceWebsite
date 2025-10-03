@@ -2,12 +2,139 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aviles Web Solutions - Custom Websites for Small Businesses</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Aviles Web Solutions - Custom Websites for Small Businesses | Professional Web Design</title>
+    <meta name="title" content="Aviles Web Solutions - Custom Websites for Small Businesses | Professional Web Design" />
+    <meta name="description" content="Professional web design and development services for small businesses, entrepreneurs, and personal brands. Custom websites starting at $300. Mobile-friendly, SEO-optimized, and delivered fast. Based in Atlanta, serving nationwide." />
+    <meta name="keywords" content="web design, web development, small business websites, custom websites, professional web design, Atlanta web developer, mobile-friendly websites, SEO websites, business websites, portfolio websites" />
+    <meta name="author" content="David Aviles - Aviles Web Solutions" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://avileswebsolutions.com/" />
+    <meta property="og:title" content="Aviles Web Solutions - Custom Websites for Small Businesses" />
+    <meta property="og:description" content="Professional web design and development services for small businesses, entrepreneurs, and personal brands. Custom websites starting at $300. Mobile-friendly, SEO-optimized, and delivered fast." />
+    <meta property="og:image" content="https://avileswebsolutions.com/og-image.jpg" />
+    <meta property="og:site_name" content="Aviles Web Solutions" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://avileswebsolutions.com/" />
+    <meta property="twitter:title" content="Aviles Web Solutions - Custom Websites for Small Businesses" />
+    <meta property="twitter:description" content="Professional web design and development services for small businesses, entrepreneurs, and personal brands. Custom websites starting at $300." />
+    <meta property="twitter:image" content="https://avileswebsolutions.com/og-image.jpg" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Aviles Web Solutions" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://avileswebsolutions.com/" />
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Fonts with display=swap for better performance -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/main.jsx" as="script">
+    <link rel="preload" href="/src/PersonalWebsite.css" as="style">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Aviles Web Solutions",
+      "description": "Professional web design and development services for small businesses, entrepreneurs, and personal brands",
+      "url": "https://avileswebsolutions.com",
+      "telephone": "+1-470-526-3353",
+      "email": "davidfrontweb@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Atlanta",
+        "addressRegion": "GA",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "33.7490",
+        "longitude": "-84.3880"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "serviceType": "Web Design and Development",
+      "priceRange": "$300-$2000+",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "founder": {
+        "@type": "Person",
+        "name": "David Aviles"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Web Design Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Starter Site",
+              "description": "Home page custom design with basic pages and mobile-friendly layout"
+            },
+            "price": "300-800",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business Site",
+              "description": "Up to 5 custom pages with modern responsive design and SEO"
+            },
+            "price": "1000-1500",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Premium Package",
+              "description": "Fully customized and optimized site with custom features"
+            },
+            "price": "2000+",
+            "priceCurrency": "USD"
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "1"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

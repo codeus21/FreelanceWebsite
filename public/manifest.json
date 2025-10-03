@@ -1,0 +1,21 @@
+{
+  "name": "Aviles Web Solutions - Custom Websites for Small Businesses",
+  "short_name": "Aviles Web Solutions",
+  "description": "Professional web design and development services for small businesses, entrepreneurs, and personal brands",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

@@ -12,12 +12,43 @@
     border-bottom: 1px solid rgba(135, 206, 250, 0.2);
 }
 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo a:hover {
+    transform: scale(1.05);
+}
+
+.nav-logo img {
+    transition: all 0.3s ease;
+}
+
+.nav-logo a:hover img {
+    filter: brightness(1.1);
+}
+
 .nav-links {
     display: flex;
     justify-content: center;
     gap: 3rem;
-    max-width: 800px;
-    margin: 0 auto;
+    flex: 1;
 }
 
 .nav-links a {
@@ -75,14 +106,19 @@
 @media (max-width: 768px) {
     .main-nav {
         padding: 1rem;
-        display: flex;
+    }
+    
+    .nav-container {
         justify-content: space-between;
-        align-items: center;
+    }
+    
+    .nav-logo {
+        order: 1;
     }
     
     .mobile-menu-toggle {
         display: block;
-        order: 2;
+        order: 3;
     }
     
     .nav-links {
@@ -99,6 +135,7 @@
         box-shadow: 0 8px 32px rgba(135, 206, 250, 0.2);
         border-top: 1px solid rgba(135, 206, 250, 0.2);
         animation: slideDown 0.3s ease-out;
+        order: 2;
     }
     
     .nav-links.active {
@@ -131,6 +168,11 @@
 @media (max-width: 480px) {
     .main-nav {
         padding: 0.8rem 1rem;
+    }
+    
+    .nav-logo img {
+        width: 32px;
+        height: 32px;
     }
     
     .nav-links a {
